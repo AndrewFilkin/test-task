@@ -51,12 +51,13 @@
 </head>
 <body>
 <header>
-    <h1>Заголовок статьи</h1>
-    <p>Количество просмотров: <span id="views">0</span> | Количество лайков: <span id="likes">0</span></p>
+    <h1>{{$article->title}}</h1>
+    <p>Количество просмотров: <span id="views">{{$article->views_count}}</span> | Количество лайков: <span
+            id="likes">{{$article->likes_count}}</span></p>
 </header>
 
 <article>
-    <p>Текст статьи будет здесь.</p>
+    <p>{{$article->text}}</p>
 </article>
 
 <form id="commentForm">
@@ -68,6 +69,20 @@
 
     <button type="button" onclick="addComment()">Отправить</button>
 </form>
+
+<h1>Комментарии</h1>
+
+@if(isset($comments))
+
+    @foreach($comments as $comment)
+
+    <div class="comment">
+        <p><strong>{{$comment->name}}:</strong>{{$comment->comment}}</p>
+        <p><em>Комментарий оставлен: 2024-01-30</em></p>
+    </div>
+
+    @endforeach
+@endif
 
 <script>
     function addComment() {

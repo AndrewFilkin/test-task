@@ -37,14 +37,20 @@
     </style>
 </head>
 <body>
+
+@foreach($articles as $article)
+
 <div class="article">
-    <h2>Заголовок статьи 1</h2>
-    <p>Описание статьи 1. Здесь может быть более подробное описание содержания статьи.</p>
+    <a href="{{route('article.show.one', ['slug' => $article->slug])}}"><h2>{{$article->title}}</h2></a>
+    <p>{{$article->description}}</p>
     <div class="metadata">
-        <span>Просмотры: 100</span> | <span>Лайки: 25</span>
+        <span>Просмотры: 999</span> | <span>Лайки: {{$article->likes_count}}</span>
     </div>
 </div>
 
+@endforeach
+
+{{$articles->links("pagination::bootstrap-4")}}
 
 </body>
 </html>
