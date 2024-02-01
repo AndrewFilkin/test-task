@@ -13,6 +13,8 @@
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.9",
+        "ccinn/composer-husky-plugin": "*",
+        "ccinn/husky-php": "*",
         "fakerphp/faker": "^1.9.1",
         "igorsgm/laravel-git-hooks": "^1.1",
         "laravel/pint": "^1.0",
@@ -60,7 +62,8 @@
         "sort-packages": true,
         "allow-plugins": {
             "pestphp/pest-plugin": true,
-            "php-http/discovery": true
+            "php-http/discovery": true,
+            "ccinn/composer-husky-plugin": true
         }
     },
     "minimum-stability": "stable",

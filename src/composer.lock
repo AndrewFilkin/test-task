@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f7dcf453badb53c04e43d785ea739805",
+    "content-hash": "750feaf3e688adea8ace8a219b3a8f71",
     "packages": [
         {
             "name": "brick/math",
@@ -5797,6 +5797,114 @@
             "time": "2023-08-25T18:43:57+00:00"
         },
         {
+            "name": "ccinn/composer-husky-plugin",
+            "version": "v0.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/whiteCcinn/composer-husky-plugin.git",
+                "reference": "815623c34991991e998572abca8208c07295838c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/whiteCcinn/composer-husky-plugin/zipball/815623c34991991e998572abca8208c07295838c",
+                "reference": "815623c34991991e998572abca8208c07295838c",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "^1.1 || ^2.0",
+                "ext-json": "*"
+            },
+            "require-dev": {
+                "composer/composer": "^1.6.5 || ^1.7.0 || ^1.8.0 || ^2.0"
+            },
+            "type": "composer-plugin",
+            "extra": {
+                "class": "Husky\\Plugins\\HuskyPlugin"
+            },
+            "autoload": {
+                "psr-4": {
+                    "Husky\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "caiwenhui",
+                    "email": "471113744@qq.com",
+                    "homepage": "https://github.com/whiteCcinn",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Husky-php composer plugin",
+            "keywords": [
+                "composer-husky-plugin",
+                "composer-plugin",
+                "husky-php"
+            ],
+            "support": {
+                "issues": "https://github.com/whiteCcinn/composer-husky-plugin/issues",
+                "source": "https://github.com/whiteCcinn/composer-husky-plugin/tree/v0.2.0"
+            },
+            "time": "2021-08-06T15:36:19+00:00"
+        },
+        {
+            "name": "ccinn/husky-php",
+            "version": "v0.4.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/whiteCcinn/husky-php.git",
+                "reference": "5dabd40d79854fc5d820f46b8da714d6144ecc25"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/whiteCcinn/husky-php/zipball/5dabd40d79854fc5d820f46b8da714d6144ecc25",
+                "reference": "5dabd40d79854fc5d820f46b8da714d6144ecc25",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "php": ">=8.0",
+                "symfony/console": "^5.4|^6",
+                "symfony/filesystem": "^5.4|^6"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^3.13",
+                "phpunit/phpunit": "^9.5"
+            },
+            "bin": [
+                "husky-php",
+                "sh/husky-default-pre-commit"
+            ],
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "App\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "caiwenhui",
+                    "email": "471113744@qq.com"
+                }
+            ],
+            "description": "Similar to js-husky client git hook implementation",
+            "homepage": "https://github.com/whiteCcinn/husky-php",
+            "keywords": [
+                "husky",
+                "php"
+            ],
+            "support": {
+                "docs": "https://github.com/whiteCcinn/husky-php",
+                "issues": "https://github.com/whiteCcinn/husky-php/issues",
+                "source": "https://github.com/whiteCcinn/husky-php"
+            },
+            "time": "2023-01-09T03:23:09+00:00"
+        },
+        {
             "name": "fakerphp/faker",
             "version": "v1.23.1",
             "source": {
@@ -8246,6 +8354,69 @@
                 }
             ],
             "time": "2024-01-12T13:14:58+00:00"
+        },
+        {
+            "name": "symfony/filesystem",
+            "version": "v6.4.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/filesystem.git",
+                "reference": "7f3b1755eb49297a0827a7575d5d2b2fd11cc9fb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/filesystem/zipball/7f3b1755eb49297a0827a7575d5d2b2fd11cc9fb",
+                "reference": "7f3b1755eb49297a0827a7575d5d2b2fd11cc9fb",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.1",
+                "symfony/polyfill-ctype": "~1.8",
+                "symfony/polyfill-mbstring": "~1.8"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Filesystem\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Provides basic utilities for the filesystem",
+            "homepage": "https://symfony.com",
+            "support": {
+                "source": "https://github.com/symfony/filesystem/tree/v6.4.3"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2024-01-23T14:51:35+00:00"
         },
         {
             "name": "symfony/yaml",
